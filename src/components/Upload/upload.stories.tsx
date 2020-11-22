@@ -10,17 +10,17 @@ const defaultFileList: UploadFile[] = [
   { uid: '121', size: 1234, name: 'eyiha.md', status: 'error', percent: 0 }
 ]
 const SimpleUpload = () => {
-  const checkFileSize = (file: File) => {
-    if (Math.round(file.size / 1024) > 50) {
-      alert(123)
-      return false
-    }
-    return true
-  }
-  const filePromise = (file: File) => {
-    const newFile = new File([file], 'new_name.doc', { type: file.type })
-    return Promise.resolve(newFile)
-  }
+  // const checkFileSize = (file: File) => {
+  //   if (Math.round(file.size / 1024) > 50) {
+  //     alert(123)
+  //     return false
+  //   }
+  //   return true
+  // }
+  // const filePromise = (file: File) => {
+  //   const newFile = new File([file], 'new_name.doc', { type: file.type })
+  //   return Promise.resolve(newFile)
+  // }
   return (
     <Upload
       action="https://jsonplaceholder.typicode.com/posts"

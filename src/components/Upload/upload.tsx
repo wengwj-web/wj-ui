@@ -1,4 +1,4 @@
-import React, { ChangeEvent, Children, FC, useRef, useState } from 'react'
+import React, { ChangeEvent, FC, useRef, useState } from 'react'
 import axios from 'axios'
 import UploadList from './uploadList'
 // import Button from '../Button/button'
@@ -135,7 +135,6 @@ export const Upload: FC<UploadProps> = (props) => {
         }
       }
     }).then(resp => {
-      console.log(resp)
       uplateFileList(_file, { status: 'success', response: resp.data })
       if (onSuccess) {
         onSuccess(resp.data, file)
